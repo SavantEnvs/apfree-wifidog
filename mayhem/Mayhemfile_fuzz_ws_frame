@@ -1,0 +1,9 @@
+project: savantenvs/apfree-wifidog
+target: fuzz_ws_frame
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ws_frame/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ws_frame
+    libfuzzer: true
+    timeout: 5

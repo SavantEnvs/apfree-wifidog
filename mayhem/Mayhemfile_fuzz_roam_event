@@ -1,0 +1,9 @@
+project: savantenvs/apfree-wifidog
+target: fuzz_roam_event
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_roam_event/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_roam_event
+    libfuzzer: true
+    timeout: 5
